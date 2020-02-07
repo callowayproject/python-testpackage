@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: bookitnow 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bookitnow 
+    spec:
+      containers:
+        - name: bookitnow 
+          image: bookitnowacr.azurecr.io/bookitnow
+          ports:
+          - containerPort: 8080
